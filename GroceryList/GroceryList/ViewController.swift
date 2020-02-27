@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource,
+UITableViewDelegate {
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -22,8 +26,15 @@ class ViewController: UIViewController {
     @IBAction func refreshButton(_ sender: UIButton) {
     }
     
+    var items : [Item] = []
     
-    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
