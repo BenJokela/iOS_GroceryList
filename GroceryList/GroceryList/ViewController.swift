@@ -10,6 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var itemTextField: UITextField!
+    
+    @IBAction func saveButton(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func refreshButton(_ sender: UIButton) {
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

@@ -14,13 +14,85 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eld-G8-MnD">
+                                <rect key="frame" x="197" y="54" width="53" height="30"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z58-v2-jNc"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add item" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSP-Pv-HeO">
+                                <rect key="frame" x="98" y="12" width="178" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="38g-AJ-5k8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IYl-1e-3c4">
+                                <rect key="frame" x="31" y="107" width="312" height="532"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="532" id="3YU-nA-Jan"/>
+                                    <constraint firstAttribute="width" constant="312" id="rEX-zk-qlH"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="cho-go-ox6" customClass="TableViewCell" customModule="CoreDataDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="312" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cho-go-ox6" id="fbK-o7-kOC">
+                                            <rect key="frame" x="0.0" y="0.0" width="312" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVw-lj-wbF">
+                                                    <rect key="frame" x="15" y="11" width="297" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="lVw-lj-wbF" id="a57-Dj-CeT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJ3-6e-C6p">
+                                <rect key="frame" x="122" y="54" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wDG-C5-bGb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bSP-Pv-HeO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="7gV-nt-pTV"/>
+                            <constraint firstItem="bSP-Pv-HeO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="9sE-qZ-qFD"/>
+                            <constraint firstItem="eld-G8-MnD" firstAttribute="leading" secondItem="kJ3-6e-C6p" secondAttribute="trailing" constant="41" id="H5D-3a-RPh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bSP-Pv-HeO" secondAttribute="trailing" constant="99" id="KXv-m7-kdH"/>
+                            <constraint firstItem="kJ3-6e-C6p" firstAttribute="top" secondItem="bSP-Pv-HeO" secondAttribute="bottom" constant="8" id="Kuf-zN-nZA"/>
+                            <constraint firstItem="IYl-1e-3c4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="Mtk-Xh-ZMw"/>
+                            <constraint firstItem="eld-G8-MnD" firstAttribute="leading" secondItem="kJ3-6e-C6p" secondAttribute="trailing" constant="41" id="Ntl-L5-XAi"/>
+                            <constraint firstItem="IYl-1e-3c4" firstAttribute="top" secondItem="kJ3-6e-C6p" secondAttribute="bottom" constant="23" id="ODP-re-riw"/>
+                            <constraint firstItem="kJ3-6e-C6p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="QMr-nA-KsB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IYl-1e-3c4" secondAttribute="trailing" constant="32" id="QyZ-Zv-eiX"/>
+                            <constraint firstItem="eld-G8-MnD" firstAttribute="top" secondItem="bSP-Pv-HeO" secondAttribute="bottom" constant="8" id="SVk-fA-reF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eld-G8-MnD" secondAttribute="trailing" constant="125" id="ynG-Fm-Dq0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="itemTextField" destination="bSP-Pv-HeO" id="uJW-Ao-jIO"/>
+                        <outlet property="tableView" destination="IYl-1e-3c4" id="NdY-O2-4aa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-31" y="95"/>
+            <point key="canvasLocation" x="-132" y="-47"/>
         </scene>
     </scenes>
 </document>
