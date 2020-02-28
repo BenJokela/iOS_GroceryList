@@ -24,11 +24,6 @@ UITableViewDelegate {
         
     }
     
-    
-    @IBAction func refreshButton(_ sender: UIButton) {
-        displayGroceryList()
-    }
-    
     var items : [Item] = []
     
     func saveItem(){
@@ -60,50 +55,6 @@ UITableViewDelegate {
         
     }
     
-    /**
-                we may not ned this method? I added refresh on the save button
-     */
-    func displayGroceryList(){
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
-        let context = appDelegate.persistentContainer.viewContext
-        request.returnsObjectsAsFaults = false
-        
-        do{
-            let results = try context.fetch(request)
-            if results.count > 0 {
-                for result in results as! [NSManagedObject]{
-                    if let item = result.value(forKey: "itemName") as? String{
-                        let alert = UIAlertController(title: "Congrats", message: "\(item) was added", preferredStyle: .alert)
-
-                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-
-                        self.present(alert, animated: true)
-                        
-                    }
-                }
-            }else{
-                let alert = UIAlertController(title: "", message: "No results", preferredStyle: .alert)
-
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-
-                self.present(alert, animated: true)
-                
-            }
-        }catch{
-            let alert = UIAlertController(title: "Error", message: "Could not fetch - error...", preferredStyle: .alert)
-
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-
-            self.present(alert, animated: true)
-            
-        }
-        refreshTableView()
-    }
-    
-    /**
-     There is an issue when refreshing. The right item does not show up. It shows the one at the top
-    of the tableView
-     */
     func refreshTableView(){
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
@@ -127,7 +78,7 @@ UITableViewDelegate {
             if results.count > 0 {
                 for result in results as! [NSManagedObject]{
                     if let item = result.value(forKey: "itemName") as? String {
-                        let alert = UIAlertController(title: "Woo", message: "\(item) added!", preferredStyle: .alert)
+                        let alert = UIAlertController(title: "Woo", message: "\(itemTextField.text!) added!", preferredStyle: .alert)
 
                         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
 

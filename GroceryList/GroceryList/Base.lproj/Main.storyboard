@@ -15,13 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eld-G8-MnD">
-                                <rect key="frame" x="197" y="54" width="53" height="30"/>
-                                <state key="normal" title="Refresh"/>
-                                <connections>
-                                    <action selector="refreshButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z58-v2-jNc"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add item" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bSP-Pv-HeO">
                                 <rect key="frame" x="98" y="12" width="178" height="34"/>
                                 <constraints>
@@ -61,7 +54,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJ3-6e-C6p">
-                                <rect key="frame" x="122" y="54" width="34" height="30"/>
+                                <rect key="frame" x="170" y="69" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wDG-C5-bGb"/>
@@ -72,16 +65,12 @@
                         <constraints>
                             <constraint firstItem="bSP-Pv-HeO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="7gV-nt-pTV"/>
                             <constraint firstItem="bSP-Pv-HeO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="9sE-qZ-qFD"/>
-                            <constraint firstItem="eld-G8-MnD" firstAttribute="leading" secondItem="kJ3-6e-C6p" secondAttribute="trailing" constant="41" id="H5D-3a-RPh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bSP-Pv-HeO" secondAttribute="trailing" constant="99" id="KXv-m7-kdH"/>
-                            <constraint firstItem="kJ3-6e-C6p" firstAttribute="top" secondItem="bSP-Pv-HeO" secondAttribute="bottom" constant="8" id="Kuf-zN-nZA"/>
+                            <constraint firstItem="kJ3-6e-C6p" firstAttribute="top" secondItem="bSP-Pv-HeO" secondAttribute="bottom" constant="23" id="Kuf-zN-nZA"/>
                             <constraint firstItem="IYl-1e-3c4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="Mtk-Xh-ZMw"/>
-                            <constraint firstItem="eld-G8-MnD" firstAttribute="leading" secondItem="kJ3-6e-C6p" secondAttribute="trailing" constant="41" id="Ntl-L5-XAi"/>
-                            <constraint firstItem="IYl-1e-3c4" firstAttribute="top" secondItem="kJ3-6e-C6p" secondAttribute="bottom" constant="23" id="ODP-re-riw"/>
-                            <constraint firstItem="kJ3-6e-C6p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="QMr-nA-KsB"/>
+                            <constraint firstItem="IYl-1e-3c4" firstAttribute="top" secondItem="kJ3-6e-C6p" secondAttribute="bottom" constant="8" id="ODP-re-riw"/>
+                            <constraint firstItem="kJ3-6e-C6p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="QMr-nA-KsB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IYl-1e-3c4" secondAttribute="trailing" constant="32" id="QyZ-Zv-eiX"/>
-                            <constraint firstItem="eld-G8-MnD" firstAttribute="top" secondItem="bSP-Pv-HeO" secondAttribute="bottom" constant="8" id="SVk-fA-reF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eld-G8-MnD" secondAttribute="trailing" constant="125" id="ynG-Fm-Dq0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -92,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1623" y="-331"/>
+            <point key="canvasLocation" x="-137" y="-89"/>
         </scene>
     </scenes>
 </document>
